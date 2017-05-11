@@ -1,0 +1,140 @@
+/*
+====================
+	HOME PAGE STYLES
+====================
+*/
+
+.brian-geer-way {
+  background-color: rgba(21, 59, 113, .9);
+  @extend %section-spacing;
+
+  .row {
+    @include mq($mq-large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  p {
+    color: $white;
+  }
+
+  h1 {
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 0 4px 5px rgba(0,0,0,.4);
+    font-weight: $font-weight-semibold;
+    margin-bottom: $column-gutter;
+    @include mq($mq-large) {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-wrap {
+    display: inline-block;
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+    padding-right: $section-spacing;
+    @include mq($mq-large) {
+      border-right: 2px solid $white;
+    }
+  }
+}
+
+
+.recent-projects.front-page {
+  @extend %section-spacing;
+
+  h2 {
+    @extend %h-two;
+  }
+
+  .project-demo {
+    @include mq($mq-large) {
+      margin-left: $column-gutter;
+    }
+  }
+
+  .cta-blue {
+    text-align: right;
+  }
+}
+
+
+.back-sec {
+  position: relative;
+  overflow: hidden;
+  @extend %section-spacing;
+
+  .row {
+    @include mq($mq-large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  p {
+    color: $white;
+  }
+
+  h2 {
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 0 4px 5px rgba(0,0,0,.4);
+    display: table-caption;
+    margin-bottom: $column-gutter;
+    padding-right: $column-gutter;
+    @include mq($mq-large) {
+      margin-bottom: 0;
+      border-right: 2px solid $white;
+    }
+  }
+  &.testi {
+    box-shadow: 0 35px 80px -10px rgba(0,0,0,0.5);
+  }
+}
+
+.accreditations {
+  @extend %section-spacing;
+
+  h2 {
+    @extend %h-two;
+    display: inline-block;
+    padding-right: $column-gutter;
+  }
+
+  .right-side {
+    text-align: center;
+  }
+
+  img {
+    max-width: 459px;
+    width: 100%;
+    margin-top: $column-gutter;
+  }
+}
+
+
+.testi {
+
+  @include mq($mq-large) {
+    .testi-wrap {
+      padding-left: rem-calc(20px);
+    }
+  }
+
+
+  p {
+    font-weight: $font-weight-semibold;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  .author {
+    text-transform: uppercase;
+    font-style: normal;
+    margin-top: 20px;
+  }
+}

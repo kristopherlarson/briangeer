@@ -1,0 +1,37 @@
+/* 
+====================
+	CUSTOM FORM STYLES
+====================
+*/
+
+.phoney-field {
+    display: none;
+}
+
+
+.base-content {
+    @include foundation-form-text;
+    @include foundation-form-checkbox;
+    @include foundation-form-label;
+    @include foundation-form-helptext;
+    @include foundation-form-prepostfix;
+    @include foundation-form-fieldset;
+    @include foundation-form-select;
+    @include foundation-form-error;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="submit"],
+    input[type="password"],
+    input[type="reset"],
+    input[type="button"],
+    textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 150px;
+    }
+}

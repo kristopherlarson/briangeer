@@ -1,0 +1,16 @@
+.hero-sub {
+    height: 200px;
+  @include mq($mq-medium) {
+    height: 300px;
+  }
+  @include mq($mq-large) {
+    height: 400px;
+  }
+}
+
+.post-type-archive {
+
+  .hero-sub {
+    height: 127px;
+  }
+}

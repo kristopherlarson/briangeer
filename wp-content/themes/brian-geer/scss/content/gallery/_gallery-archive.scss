@@ -1,0 +1,118 @@
+.featured-gallery {
+
+  margin-bottom: rem-calc(24);
+
+  .columns {
+    padding: 0.625rem;
+  }
+
+  .gallery-photo {
+    position: relative;
+    overflow: hidden;
+    }
+
+    a {
+      &:hover {
+        .project-title {
+          padding-top: 40px;
+          @include mq($mq-large) {
+            padding-top: 80px;
+          }
+        }
+
+        .cta-blue {
+          top: 15px;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .corner-ribbon {
+          @extend %transition;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .corner-ribbon {
+      @extend %transition;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .project-title {
+      overflow: visible;
+      padding: 20px 10px 10px 10px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      @extend %transition;
+      @include mq($mq-large) {
+        padding: 45px 16px 16px 16px;
+      }
+
+      .parade-home {
+        background-color: #840d1b;
+        position: absolute;
+        top: -24px;
+        right: -6px;
+        transform: skew(-20deg);
+        @include mq($mq-large) {
+          top: -31px;
+        }
+        p {
+          padding: 2px 20px;
+          transform: skew(20deg);
+          color: $white;
+          text-transform: uppercase;
+          font-size: rem-calc(12);
+          @include mq($mq-large) {
+            font-size: rem-calc(16);
+          }
+        }
+      }
+
+      .cta-blue {
+        margin: 0;
+        color: $white;
+        position: absolute;
+        top: -15px;
+        right: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        font-size: rem-calc(14);
+        @include mq($mq-medium) {
+          font-size: 16px;
+        }
+
+        svg {
+          fill: $white;
+          width: 15px;
+          height: 17px;
+          @include mq($mq-medium) {
+            width: 18px;
+            height: 23px;
+          }
+        }
+      }
+
+      h2 {
+        border-right: none;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 0;
+        font-weight: $font-weight-semibold;
+        font-size: 18px;
+        @include mq($mq-medium) {
+          font-size: 20px;
+        }
+        @include mq($mq-large) {
+          font-size: 28px;
+        }
+      }
+    }
+}
+

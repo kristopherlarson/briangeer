@@ -1,0 +1,96 @@
+.desktop-nav-active {
+
+    #main-navigation {
+        opacity: 1;
+        //transition: opacity .15s ease;
+        white-space: nowrap;
+    }
+
+    .main-nav {
+        width: $main-nav-width;
+        height: $main-nav-height;
+        text-align: right;
+    }
+
+    .navbar {
+        @include nav-positioner;
+        background-color: $nav-bar-background;
+        display: none;
+        @include mq($mq-full) {
+            display: block;
+        }
+
+        > li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -4px;
+            line-height: $nav-bar-li-line-height;
+            padding: $nav-bar-li-padding-mobile;
+            @include mq($mq-large) {
+                padding: $nav-bar-li-padding;
+            }
+            &:before {
+                @extend %transition-opacity;
+                content: '';
+                background-image: url('../images/svg/hover-line.svg');
+                background-repeat: no-repeat;
+                width: 87px;
+                height: 9px;
+                position: absolute;
+                top: -9px;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                visibility: hidden;
+                opacity: 0;
+            }
+            &:after { // adds little dots
+                content: '|';
+                position: absolute;
+                right: -4px;
+                top: 10%;
+                font-size: 20px;
+                color: $white;
+            }
+            &:last-of-type {
+                &:after {
+                    display: none; // takes off horizontal line
+                }
+            }
+
+            > a {
+                position: relative;
+                display: inline-block;
+                color: $nav-bar-link-color;
+                font-size: $nav-bar-link-font-size;
+                font-family: $heading-font-family;
+                line-height: $nav-bar-link-line-height;
+                font-weight: $font-weight-bold;
+                padding: 0.3125rem 0.55rem;
+                text-transform: uppercase;
+
+            }
+
+        }
+
+        > li:hover,
+        > li:focus {
+
+            &:before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        > .current-menu-item,
+        > li.active {
+            cursor: pointer;
+            &:before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+    }
+}

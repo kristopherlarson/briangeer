@@ -1,0 +1,86 @@
+.recent-projects {
+
+  .hover-wrap {
+    background-color: $primary-color;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 8px;
+    @include mq($mq-medium) {
+      margin-bottom: 0;
+    }
+    &:hover {
+      img {
+        opacity: .2;
+      }
+      .corner-ribbon {
+        opacity: 1;
+      }
+      .cta {
+        opacity: 1;
+        @extend %transition-opacity;
+      }
+    }
+
+    .cta {
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      text-align: center;
+      font-weight: $font-weight-semibold;
+      opacity: 0;
+    }
+
+    img {
+      opacity: 1;
+      @extend %transition-opacity;
+    }
+
+    .corner-ribbon {
+      opacity: 0;
+    }
+  }
+}
+
+.page-content {
+
+  .recent-projects {
+    margin-top: $column-gutter;
+    @include mq($mq-medium) {
+      margin-top: $section-spacing;
+    }
+
+    .heading-wrap {
+      display: inline-block;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      padding-right: $column-gutter;
+      font-size: rem-calc(36);
+      text-transform: uppercase;
+      font-weight: $font-weight-semibold;
+      line-height: 1;
+    }
+
+    .cta-blue {
+      margin-top: 0;
+      text-align: right;
+      padding-right: $column-gutter;
+      margin-bottom: rem-calc(20);
+      @include mq($mq-large) {
+        margin-bottom: 0;
+      }
+    }
+
+    .hover-wrap {
+      margin-bottom: rem-calc(20);
+      @include mq($mq-medium) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

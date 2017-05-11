@@ -1,0 +1,54 @@
+.testi-head {
+    color: $primary-color;
+    font-weight: $font-weight-semibold;
+}
+
+.gallery-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq($mq-medium) {
+        justify-content: inherit;
+    }
+
+    .slider-image {
+        padding: 2px;
+        width: 150px;
+        height: 150px;
+        @include mq($mq-full) {
+            padding: 10px;
+        }
+    }
+
+    .view-all {
+        border: 3px solid $primary-color;
+        color: $primary-color;
+        font-weight: $font-weight-semibold;
+        margin: 2px;
+        width: 146px;
+        height: 146px;
+        display: inline-block;
+        @extend %transition;
+        @include mq($mq-full) {
+            margin: 10px;
+            width: 130px;
+            height: 130px;
+        }
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+            .icon-chevron {
+                fill: $white;
+            }
+        }
+
+        .icon-chevron {
+            width: 13px;
+            height: 14px;
+            vertical-align: middle;
+            fill: $primary-color;
+            @extend %transition-fill;
+        }
+    }
+}
